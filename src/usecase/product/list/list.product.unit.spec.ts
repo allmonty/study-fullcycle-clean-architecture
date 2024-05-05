@@ -18,7 +18,7 @@ describe("Unit test list product use case", () => {
       name: "Product 1",
       price: 10,
     };
-    productRepository.findAll.mockResolvedValue([product]);
+    productRepository.findAll.mockReturnValue([product]);
     const productListUseCase = new ListProductUseCase(productRepository);
 
     const output = await productListUseCase.execute({});
@@ -49,7 +49,7 @@ describe("Unit test list product use case", () => {
       name: "Product 3",
       price: 10,
     }];
-    productRepository.findAll.mockResolvedValue(products);
+    productRepository.findAll.mockReturnValue(products);
     const productListUseCase = new ListProductUseCase(productRepository);
 
     const output = await productListUseCase.execute({});

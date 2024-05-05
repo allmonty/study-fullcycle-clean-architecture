@@ -18,7 +18,7 @@ describe("Unit test find product use case", () => {
       name: "Product 1",
       price: 10,
     };
-    productRepository.find.mockResolvedValue(product);
+    productRepository.find.mockReturnValue(product);
     const productFindUseCase = new FindProductUseCase(productRepository);
 
     const output = await productFindUseCase.execute(product);
