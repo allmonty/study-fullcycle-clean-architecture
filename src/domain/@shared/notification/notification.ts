@@ -4,6 +4,7 @@ export type NotificationErrorProps = {
 };
 
 export default class Notification {
+  //notification class
   private errors: NotificationErrorProps[] = [];
 
   addError(error: NotificationErrorProps) {
